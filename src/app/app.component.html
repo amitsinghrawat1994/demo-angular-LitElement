@@ -1,16 +1,15 @@
 <custom-menu options='["Home" , "News", "Contact", "About"]'></custom-menu>
 
-<router-outlet></router-outlet>
-<br />
-<p>below is a web component</p>
-<p>{{ name }}</p>
-<p>-----------------------------------</p>
-<wc-mood mood="awesome123"></wc-mood>
-<p>-----------------------------------</p>
+<handle-events></handle-events>
+
+<wc-mood mood="world"></wc-mood>
+
 <lit-element-drop-down
-  title="Chose your language"
+  title="Chose your subject"
   value="German"
   closed="true"
-  options='["German","English","France","Espanol"]'
+  options='["International Busines", "Organizational Development", "Accounting for Managers"]'
 >
 </lit-element-drop-down>
+
+<router-outlet></router-outlet>

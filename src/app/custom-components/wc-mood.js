@@ -14,8 +14,6 @@ export class WebComponentsMood extends LitElement {
 
   render() {
     return html`
-      <h1>Test works!</h1>
-      <p>For real though!</p>
       <div>Hello ${this.mood}</div>
     `;
   }

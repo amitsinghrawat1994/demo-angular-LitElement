@@ -26,7 +26,7 @@ export class DropDown extends LitElement {
       }
 
       .label {
-        font-size: 12px;
+        font-size: 16px;
         color: var(--primary-color);
       }
 
@@ -107,14 +107,23 @@ export class DropDown extends LitElement {
         color: #fff;
         padding-left: 16px;
       }
+
+      .m-5 {
+        margin: 5px;
+        width: 200px;
+      }
     `;
   }
 
   constructor() {
     super();
-    this.title = "Choose your language";
+    this.title = "Choose your subject";
     this.value = "---None---";
-    this.options = ["German", "English", "France"];
+    this.options = [
+      "International Busines",
+      "Organizational Development",
+      "Accounting for Managers",
+    ];
     this.closed = true;
   }
 
@@ -135,21 +144,23 @@ export class DropDown extends LitElement {
 
   render() {
     return html`
-      <div class="label">${this.title}</div>
-      <div class="head" @click="${this.toggleMenu}">
-        <div class="choice">${this.value}</div>
-        <div class="toggle ${this.closed ? "closed" : "open"}"></div>
-      </div>
-      <div class="body ${this.closed ? "closed" : "open"}">
-        ${this.options.map(
-          (option) =>
-            html`<div
-              class="option"
-              @click="${(e) => this.handleMenuOption(e, option)}"
-            >
-              ${option}
-            </div>`
-        )}
+      <div class="m-5">
+        <div class="label">${this.title}</div>
+        <div class="head" @click="${this.toggleMenu}">
+          <div class="choice">${this.value}</div>
+          <div class="toggle ${this.closed ? "closed" : "open"}"></div>
+        </div>
+        <div class="body ${this.closed ? "closed" : "open"}">
+          ${this.options.map(
+            (option) =>
+              html`<div
+                class="option"
+                @click="${(e) => this.handleMenuOption(e, option)}"
+              >
+                ${option}
+              </div>`
+          )}
+        </div>
       </div>
     `;
   }
