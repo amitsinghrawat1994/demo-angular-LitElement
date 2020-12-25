@@ -143,7 +143,7 @@
       }
     `}constructor(){super(),this.options=[],this.menus=[{title:"Home",route:"home"},{title:"News",route:"news"},{title:"Contact",route:"contact"},{title:"About",route:"about"}]}render(){return L.c`
       <ul>
-        ${this.menus.map(t=>L.c`<li><a href="/${t.route}">${t.title}</a></li> `)}
+        ${this.menus.map(t=>L.c`<li><a href="/demo-angular-LitElement/${t.route}">${t.title}</a></li> `)}
       </ul>
     `}}),customElements.define("handle-events",class extends L.a{static get properties(){return{count:{type:Number}}}static get styles(){return L.b`
       .m-5 {
