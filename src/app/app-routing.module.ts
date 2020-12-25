@@ -14,6 +14,21 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
+  {
+    path: 'news',
+    loadChildren: () =>
+      import('./views/news/news.module').then((m) => m.NewsModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./views/contact/contact.module').then((m) => m.ContactModule),
+  },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./views/about/about.module').then((m) => m.AboutModule),
+  },
 ];
 
 @NgModule({

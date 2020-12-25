@@ -38,13 +38,32 @@ export class Menu extends LitElement {
   constructor() {
     super();
     this.options = [];
+    this.menus = [
+      {
+        title: "Home",
+        route: "home",
+      },
+      {
+        title: "News",
+        route: "news",
+      },
+      {
+        title: "Contact",
+        route: "contact",
+      },
+      {
+        title: "About",
+        route: "about",
+      },
+    ];
   }
 
   render() {
     return html`
       <ul>
-        ${this.options.map(
-          (option) => html`<li><a href="#${option}">${option}</a></li> `
+        ${this.menus.map(
+          (option) =>
+            html`<li><a href="/${option.route}">${option.title}</a></li> `
         )}
       </ul>
     `;

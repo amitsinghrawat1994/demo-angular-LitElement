@@ -1,0 +1,16 @@
+<hr />
+<p><b>Two way binding using from.</b></p>
+<div *ngIf="form">
+  <form [formGroup]="form" (submit)="submit()">
+    <input type="text" formControlName="field1" placeholder="Type any text" />
+  </form>
+  <p>Your text is : {{ form.value.field1 }}</p>
+</div>
+<div>
+  <button type="button" (click)="btnClickEvent()">Click Me</button>
+</div>
+<hr />
+<p><b>Two way binding.</b></p>
+<input type="text" [(ngModel)]="text1" name="text1" />
+<p>Your text is : {{ text1 }}</p>
+<hr />

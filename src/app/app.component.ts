@@ -9,6 +9,4 @@ import 'src/app/custom-components/handle-event';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  name = 'Angular and LitElement';
-}
+export class AppComponent {}
