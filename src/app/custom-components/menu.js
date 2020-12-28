@@ -63,7 +63,7 @@ export class Menu extends LitElement {
       <ul>
         ${this.menus.map(
           (option) =>
-            html`<li><a href="/${option.route}">${option.title}</a></li> `
+            html`<li><a href="/demo-angular-LitElement/${option.route}">${option.title}</a></li> `
         )}
       </ul>
     `;

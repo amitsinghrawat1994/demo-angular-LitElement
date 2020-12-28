@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
 import { SharedModule } from './views/shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,7 @@ import { SharedModule } from './views/shared/shared.module';
     AppRoutingModule,
     DashboardModule,
     SharedModule,
-    NewsModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
