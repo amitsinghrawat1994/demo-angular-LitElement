@@ -11,7 +11,6 @@ import { ITopNavbarStep } from 'src/app/model/TopBar.model';
 })
 export class StepperMenuComponent implements OnInit {
   @Input('steps') steps: ITopNavbarStep[] = [];
-  //@Input('selectIndex') selectIndex = 0;
   @Input('disabled') disabled = false;
   selectIndex = 0;
   route: string = '';

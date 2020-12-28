@@ -1,31 +1,33 @@
-<div id="top-nav-bar" class="top-nav-bar">
-  <div class="top-nav-bar-wrap">
-    <div class="top-nav-bar-steps">
-      <ul id="step-list" class="steps" [attr.disabled]="disabled">
-        <ng-container *ngFor="let step of steps; let i = index">
-          <li
-            id="step-item-{{ step.id }}"
-            class="step-item"
-            [ngClass]="getItemClass(i)"
-          >
-            <a
-              id="step-link-{{ step.id }}"
-              [routerLink]="[step.href]"
-              tabindex="{{ step.tabindex ? step.tabindex : -1 }}"
+<div>
+  <div id="top-nav-bar" class="top-nav-bar">
+    <div class="top-nav-bar-wrap">
+      <div class="top-nav-bar-steps">
+        <ul id="step-list" class="steps" [attr.disabled]="disabled">
+          <ng-container *ngFor="let step of steps; let i = index">
+            <li
+              id="step-item-{{ step.id }}"
+              class="step-item"
+              [ngClass]="getItemClass(i)"
             >
-              <span id="step-value-{{ step.id }}" class="step">
-                {{ step.value }}
-              </span>
-              <span class="step-dot">
-                <div class="triangle-right"></div>
-              </span>
-            </a>
-          </li>
-        </ng-container>
-      </ul>
-    </div>
-    <div class="top-nav-bar-slot">
-      <!-- <slot></slot> -->
+              <a
+                id="step-link-{{ step.id }}"
+                [routerLink]="[step.href]"
+                tabindex="{{ step.tabindex ? step.tabindex : -1 }}"
+              >
+                <span id="step-value-{{ step.id }}" class="step">
+                  {{ step.value }}
+                </span>
+                <span class="step-dot">
+                  <div class="triangle-right"></div>
+                </span>
+              </a>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+      <div class="top-nav-bar-slot">
+        <!-- <slot></slot> -->
+      </div>
     </div>
   </div>
 </div>

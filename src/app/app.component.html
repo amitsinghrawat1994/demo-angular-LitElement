@@ -1,6 +1,14 @@
 <!-- Menu bar Angular componet -->
-<app-header></app-header>
-<br />
-<app-stepper-menu [steps]="steps"></app-stepper-menu>
+<div><strong>Angualr Navigation bar</strong></div>
+<app-stepper-menu [steps]="steps"> </app-stepper-menu>
+<hr />
+<div><strong>Lit-Element Navigation bar</strong></div>
+<bd-top-nav-bar
+  [steps]="steps"
+  [selectIndex]="selectedIndex"
+  [disabled]="false"
+  (bd-top-nav-bar-select)="navBarSelected($event)"
+></bd-top-nav-bar>
 
+<hr />
 <router-outlet></router-outlet>
