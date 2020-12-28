@@ -1,4 +1,3 @@
-import { NewsModule } from './views/news/news.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
